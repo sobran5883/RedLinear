@@ -1,21 +1,22 @@
-import React from "react";
-import Hero from "./components/Hero/Hero";
-import Services from "./components/Services/Services";
-import Banner from "./components/Banner/Banner";
-import Subscribe from "./components/Subscribe/Subscribe";
-import Banner2 from "./components/Banner/Banner2";
-import Footer from "./components/Footer/Footer";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Layout from './layout/Layout';
+import Home from './pages/Home';
+import Team from "./pages/Team";
+import Usecase from "./pages/Usecase/Usecase";
+import Hardware from "./pages/Hardware";
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden bg-white text-dark">
-      <Hero />
-      <Services />
-      <Banner />
-      <Subscribe />
-      <Banner2 />
-      <Footer />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="" element={<Home />} />
+          <Route path="/team" element={< Team/>} />
+          <Route path="/usecase" element={< Usecase />} />
+          <Route path="/hardware" element={< Hardware />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

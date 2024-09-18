@@ -72,14 +72,15 @@ const SlideLeft = (delay) => {
 };
 const Services = () => {
   return (
-    <section className="bg-white">
-      <div className="container pb-14 pt-16">
-        <h1 className="text-4xl font-bold text-left pb-10">
-          Services we provide
+    <section id="services" className="bg-white">
+      <div className="container pb-14 pt-32">
+        <h1 className="text-4xl font-semibold text-left pb-10">
+          Services
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">
           {ServicesData.map((service) => (
             <motion.div
+              key={service.id} 
               variants={SlideLeft(service.delay)}
               initial="initial"
               whileInView={"animate"}

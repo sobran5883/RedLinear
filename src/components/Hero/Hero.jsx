@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
 import HeroPng from "../../assets/hero1.png";
 import { animate, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { Navigate } from "react-router-dom";
 
 export const FadeUp = (delay) => {
   return {
@@ -29,7 +29,6 @@ export const FadeUp = (delay) => {
 const Hero = () => {
   return (
     <section className="bg-light overflow-hidden relative">
-      <Navbar />
       <div className="container mt-8 grid grid-cols-1 md:grid-cols-2 min-h-[650px]">
         {/* Brand Info */}
         <div className="flex flex-col justify-center py-14 md:py-0 relative z-20">
@@ -64,10 +63,16 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <button className="primary-btn bg-black/90 shadow-none flex items-center gap-2 group">
-                Get Started
-                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
-              </button>
+            <a
+              href="https://da-pearl.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-btn bg-black/90 shadow-none flex items-center gap-2 group"
+            >
+              Get Started
+              <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
+            </a>
+
             </motion.div>
           </div>
         </div>

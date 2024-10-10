@@ -19,21 +19,21 @@ const members=[
     id:2,
     img:anuragImg,
     name:'Anurag Verma',
-    experties:'SDE',
+    experties:'Full Stack Developer',
     year:'4th Year ECE'
   },
   {
     id:3,
     img:sobranImg,
     name:'Sobran Rajak',
-    experties:'SDE',
+    experties:'MERN Developer',
     year:'4th Year CSE-AI'
   },
   {
     id:4,
     img:ankitImg,
     name:'Ankit Duvedi',
-    experties:'Inhe sab aata hai',
+    experties:'Robotics',
     year:'4th Year ECE'
   },
   {
@@ -46,7 +46,7 @@ const members=[
   {
     id:6,
     img:prafullImg,
-    name:'Kala Babu',
+    name:'Prafull Kumar Singh',
     experties:'Graphic designer',
     year:'4th Year ECE'
   }
@@ -59,19 +59,8 @@ const Team = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="container"
       >
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
-          
-        </div> */}
+
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-          {/* <div className='flex flex-col items-center justify-center'>
-          <a href="https://www.linkedin.com/in/sobran5883">
-            <img className="h-40 w-40 my-4 rounded-full border-2 border-red-600" src={sobran} alt="Sobran Rajak" />
-          </a>
-              <h1 className='text-deep-green text-lg md:text-xl font-semibold'>Sobran Rajak</h1>
-              <h1 className='font-bold text-lg'>[SDE]</h1>
-              <h1 className='text-lg font-bold my-2'>2 Yrs of experience</h1>
-              <p className='text-center md:w-10/12'>Our SDE is not just a dev but a visionary who brings a distinctive perspective to the development of our website. With a wealth of experience and a knack for innovation, they are the driving force behind success.</p>
-          </div> */}
           {members.map((member)=>(
             <div key={member.id} className="flex flex-col items-center justify-center">
               <a href="#"><img src={member.img} className="h-40 w-40 my-4 rounded-full border-2 border-red-600" alt="profile" /></a>

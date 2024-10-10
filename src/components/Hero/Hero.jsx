@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Blob from "../../assets/blob.svg";
-import HeroPng from "../../assets/hero1.png";
+import HeroPng from "../../assets/bot.png";
 import { animate, motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import { Navigate } from "react-router-dom";
@@ -77,14 +77,14 @@ const Hero = () => {
           </div>
         </div>
         {/* Hero Image */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center scale-[2.5] items-center">
           <motion.img
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
             src={HeroPng}
             alt=""
-            className="w-[300px] xl:w-[350px] relative z-10 drop-shadow"
+            className="w-[300px] xl:w-full relative z-10 drop-shadow"
           />
           <motion.img
             initial={{ x: -50, opacity: 0 }}

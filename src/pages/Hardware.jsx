@@ -37,9 +37,9 @@ return (
       <div className='w-10/12 my-28 flex flex-col items-center justify-center'>
           {Hardwares.map((hardware)=>(
               <div className='w-full my-4'>
-                  <h1 className='text-4xl my-2 underline text-red-800'>{hardware.title}</h1>
-                  <p className='text-lg font-semibold'>{hardware.discription1}</p>
-                  <p className='text-lg font-semibold'>{hardware.discription2}</p>
+                  <h1 className='text-xl md:text-4xl my-2 underline text-red-800'>{hardware.title}</h1>
+                  <p className='text-base md:text-lg font-semibold'>{hardware.discription1}</p>
+                  <p className='text-base md:text-lg font-semibold'>{hardware.discription2}</p>
               </div>
           ))}
       </div>
